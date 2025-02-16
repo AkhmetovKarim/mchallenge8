@@ -48,3 +48,11 @@ function calculateRentalCost(days, carType, insurance = false) { //write a funct
 }
 console.log(calculateRentalCost(3, "Economy", true)); //logs
 console.log(calculateRentalCost(5, "Luxury", false));
+
+//Task 5
+function calculateLoanPayment(principal, rate, time) { //write a function 
+    let totalPayment = principal + (principal * rate * time); //formula
+    return `Total Payment: $${totalPayment.toFixed(2)}`;
+}
+console.log(calculateLoanPayment(1000, 0.05, 2)); //logs
+console.log(calculateLoanPayment(5000, 0.07, 3));
