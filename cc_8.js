@@ -56,3 +56,11 @@ function calculateLoanPayment(principal, rate, time) { //write a function
 }
 console.log(calculateLoanPayment(1000, 0.05, 2)); //logs
 console.log(calculateLoanPayment(5000, 0.07, 3));
+
+//Task 6
+function filterLargeTransactions(transactions, filterFunction) { //write a high order functiion
+    return transactions.filter(filterFunction);
+}
+let transactions = [200, 1500, 3200, 800, 2500]; //declare an array with five values
+console.log(filterLargeTransactions(transactions, amount => amount > 1000)); //log
+
