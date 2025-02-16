@@ -29,3 +29,22 @@ let calculateServiceFee = (amount, serviceType) => { //write an arrow function
 };
 console.log(calculateServiceFee(200, "Premium")); //logs
 console.log(calculateServiceFee(500, "Standard"));
+
+//Task 4
+function calculateRentalCost(days, carType, insurance = false) { //write a function 
+    let dailyRate = 0;
+    if (carType === "Economy") { //economy = 40 bucks a day
+        dailyRate = 40;
+    } else if (carType === "Stadard") { //standad = 60 bucks a day
+        dailyRate = 60;
+    } else if (carType === "Luxury") { //luxury = 100 bucks a day
+        dailyRate = 100; 
+    }
+    let totalCost = days * dailyRate;
+    if (insurance) {
+        totalCost += days * 20;
+    }
+    return `Total Rental Cost: $${totalCost}`;
+}
+console.log(calculateRentalCost(3, "Economy", true)); //logs
+console.log(calculateRentalCost(5, "Luxury", false));
