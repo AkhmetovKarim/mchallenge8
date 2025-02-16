@@ -64,3 +64,14 @@ function filterLargeTransactions(transactions, filterFunction) { //write a high 
 let transactions = [200, 1500, 3200, 800, 2500]; //declare an array with five values
 console.log(filterLargeTransactions(transactions, amount => amount > 1000)); //log
 
+//Task 7
+function createCartTracker() { //write a function that returns another function
+let total = 0;
+return function (price) {
+    total += price;
+    return `Total Cart Value: $${total}`;
+};
+}
+let cart = createCartTracker();
+console.log(cart(20)); //log
+console.log(cart(35));
